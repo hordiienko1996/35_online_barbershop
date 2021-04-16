@@ -263,6 +263,8 @@ address {
   padding-bottom: 130px;
 }
 
+/* Header */
+
 .header {
   position: absolute;
   top: 0;
@@ -309,6 +311,8 @@ address {
   }
 }
 
+/* Hero */
+
 .hero {
   display: flex;
   align-items: center;
@@ -347,6 +351,8 @@ address {
 .hero-sidebar .socials-list {
   transform: rotate(-90deg) translateX(50%);
 }
+
+/* Price list */
 
 .price {
   background-image: url(../images/price/bg.png);
@@ -405,6 +411,7 @@ address {
   margin-right: auto;
 }
 
+/* Benefits */
 .benefits-item {
   flex-basis: calc((100% - 2 * 30px) / 6 * 2);
   padding: 20px 18px;
@@ -440,6 +447,7 @@ address {
   color: var(--accent-color);
 }
 
+/*  Team*/
 .team {
   background-color: var(--second-bg-color);
 }
@@ -459,6 +467,79 @@ address {
   font-size: 14px;
   line-height: 1.36;
   color: var(--accent-color);
+}
+
+/* Form */
+
+.contact-us:focus-within .section-title {
+  color: var(--accent-color);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-field {
+  width: calc((100% - 30px) / 2);
+  padding-bottom: 8px;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+}
+
+.form-field:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+
+.form-field:focus::placeholder {
+  color: var(--second-bg-color);
+}
+
+.form-field:-webkit-full-autofill,
+.form-field:-webkit-full-autofill:hover,
+.form-field:-webkit-full-autofill:focus {
+  -webkit-text-fill-color: currentColor;
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg-text-color) inset;
+}
+
+.form-field::placeholder,
+.form-field-text {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.form-message {
+  width: 100%;
+  resize: none;
+}
+
+.form-field:valid:not(:focus) {
+  color: green;
+}
+
+.form-field:invalid {
+  color: red;
+}
+
+.contacts {
+  padding-left: 100px;
+  padding-right: 100px;
+  background-image: url(../images/contacts/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .contacts-address {
@@ -490,6 +571,16 @@ address {
 
 .gallery-item {
   --grid-item: 4;
+}
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .dark-bg {
@@ -536,11 +627,10 @@ address {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   min-height: 450px;
   padding: 40px 30px;
   border-radius: 30px;
-  background-color: #fff;
   transition: transform 700ms ease-in-out 300ms;
 }
 
@@ -562,5 +652,59 @@ address {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
-  color: var(--title-color);
 }
+
+.modal .form-field-label {
+  width: calc((100% - 30px) / 2);
+  margin-bottom: 44px;
+}
+
+.form-field-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}
+
+.modal .form-field {
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.modal .form-field:not(:placeholder-shown) ~ .form-field-text {
+  top: 0;
+  left: 10px;
+  font-size: 10px;
+  transform: translateY(-100%);
+}
+
+.modal .form-field:focus + .icon {
+  stroke: #fff;
+}
+
+.modal .form-message {
+  margin-bottom: 44px;
+}
+
+.form-field-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  stroke: rgba(157, 164, 189, 0.4);
+}
+
+.modal .form-field-label {
+  position: relative;
+}
+
+/* .button[disabled] {
+  color: grey;
+  background-color: lightgrey;
+  border-color: grey;
+} */
